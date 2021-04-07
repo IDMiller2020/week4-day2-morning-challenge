@@ -1,0 +1,17 @@
+Mark's solution using a dictionary and refactored
+
+  function mostCommonLetter(str) {
+  let letters = {}
+  let largest = 0
+  let largestChar = ''
+  for(let i =0; i< str.length; i++){
+    let char = str[i]
+    letters[char] = letters[char] || 0
+    letters[char]++
+    if(letters[char] > largest){
+     largest = letters[char]
+     largestChar = char
+   }
+  }
+  return largestChar
+}
